@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimédia Kötprog</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/game.js"></script>
+</head>
+<body>
+<img id="background-img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp9050497.jpg&f=1&nofb=1&ipt=0f2108c8aea5783774a7996f5b277f2288c9a21016b445a6ecec7bc65940d361" alt="Background">
+<div id="game-container">
+    <button id="submit-hand">Kéz leadása</button>
+    <button id="buy-button">Bolti tételek változtatása (10 $)</button>
+    <button id="config-button">Beállítások</button>
+    <button id="help-button">Súgó</button>
+    <button id="swap-hand">Kéz csere</button>
+    <div id="config-menu">
+        <label for="difficulty">Nehézségi szint:</label>
+        <input type="range" id="difficulty" min="1" max="3" value="1">
+        <label for="music-toggle">Zene:</label>
+        <input type="checkbox" id="music-toggle">
+        <label for="theme">Téma:</label>
+        <select id="theme">
+            <option value="dark">Sötét</option>
+            <option value="light">Világos</option>
+        </select>
+
+    </div>
+    <div id="help-menu">
+        <p>Válassz ki legfeljebb 5 kártyát a kezedből, majd nyomd meg a "Kéz leadása" gombot.</p>
+        <p>Vásárolj kártyákat, jokereket vagy erősítéseket a boltból a "Vásárlás" gombbal.</p>
+        <p>Csak a "Kéz csere" és "Bolti tételek változtatása" gombokkal tudsz újra kérni
+            kezet vagy bolti tételeket.</p>
+
+    </div>
+    <h1>Rogue-like kártya játék</h1>
+    <div id="score">Pontszám: 0</div>
+    <div id="money">Pénz: 100 $</div>
+    <div id="round">Kör: 1/3</div>
+    <div id="target-score">Cél pontszám: 100</div>
+    <div id="remaining-hands">Hátralévő kezek: 4</div>
+    <div id="swaps-remaining">Hátralévő cserék: 3</div>
+    <h2>Kéz</h2>
+    <div id="hand"></div>
+    <h2>Jokerek</h2>
+    <div id="jokers"></div>
+    <h2>Erősítések</h2>
+    <div id="upgrades"></div>
+    <h2>Bolt</h2>
+    <div id="shop"></div>
+
+    <div id="creator-info">Készítette: Nyilas Dániel, Neptun: F3J2G5</div>
+</div>
+<audio id="background-music" loop autoplay="autoplay">
+    <source src="songs/alexander-nakarada-adventure.mp3" type="audio/mpeg">
+</audio>
+<audio id="click-sound" >
+    <source src="https://freesound.org/data/previews/171/171671_2437358-lq.mp3" type="audio/mpeg">
+</audio>
+
+
+
+</body>
+</html>
